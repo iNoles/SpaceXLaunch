@@ -7,5 +7,5 @@ pluginManagement {
 }
 
 rootProject.name = "SpaceX_Launch"
-include(":androidApp")
 include(":shared")
+include(":androidApp")

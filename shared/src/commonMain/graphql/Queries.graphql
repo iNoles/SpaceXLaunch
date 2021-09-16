@@ -1,0 +1,17 @@
+query GetAllLaunches {
+  launches {
+    id
+    name
+    date_utc
+    details
+    success
+    flight_number
+    links {
+      article
+      patch {
+        small
+      }
+    }
+  }
+}
+

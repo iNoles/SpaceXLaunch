@@ -3,8 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    kotlin("plugin.serialization")
-    id("com.squareup.sqldelight")
+    id("com.apollographql.apollo3") version "3.0.0-alpha05"
 }
 
 kotlin {
@@ -24,15 +23,16 @@ kotlin {
         }
     }
 
-    val sqlDelightVersion: String by project
+    val apolloVersion: String by project
 
     sourceSets {
         val androidAndroidTestRelease by getting
 
         val commonMain by getting {
             dependencies {
-                implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:3.0.0-SNAPSHOT")
-                implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
+                api("com.apollographql.apollo3:apollo-runtime:$apolloVersion")
+                implementation("com.apollographql.apollo3:apollo-normalized-cache:$apolloVersion")
+                implementation("com.apollographql.apollo3:apollo-normalized-cache-sqlite:$apolloVersion")
             }
         }
         val commonTest by getting {
@@ -41,11 +41,7 @@ kotlin {
                 implementation(kotlin("test-annotations-common"))
             }
         }
-        val androidMain by getting {
-            dependencies {
-                implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
-            }
-        }
+        val androidMain by getting
         val androidTest by getting {
             dependsOn(androidAndroidTestRelease)
             
@@ -54,11 +50,7 @@ kotlin {
                 implementation("junit:junit:4.13.2")
             }
         }
-        val iosMain by getting {
-            dependencies {
-                implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
-            }
-        }
+        val iosMain by getting
         val iosTest by getting
     }
 }
@@ -72,9 +64,6 @@ android {
     }
 }
 
-
-sqldelight {
-    database("AppDatabase") {
-        packageName = "com.jonathansteele.spacexlaunch.shared.cache"
-    }
+apollo {
+    packageName.set("com.jonathansteele.spacexlaunch.shared")
 }

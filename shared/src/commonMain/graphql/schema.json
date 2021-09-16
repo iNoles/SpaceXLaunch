@@ -1,0 +1,4474 @@
+{
+  "__schema": {
+    "queryType": {
+      "name": "Query"
+    },
+    "types": [
+      {
+        "kind": "OBJECT",
+        "name": "Query",
+        "fields": [
+          {
+            "name": "capsule",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Capsule"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "capsules",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Capsule"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "company",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Company"
+            },
+            "args": []
+          },
+          {
+            "name": "core",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Core"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "cores",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Core"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "crew",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Crew"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "crews",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Crew"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "dragon",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Dragon"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "dragons",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Dragon"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "history",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "History"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "histories",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "History"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "landingpad",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Landingpad"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "landingpads",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Landingpad"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "launch",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Launch"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "launches",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Launch"
+              }
+            },
+            "args": [
+              {
+                "name": "range",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "ENUM",
+                  "name": "LaunchRange"
+                }
+              },
+              {
+                "name": "ids",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "LIST",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "launchpad",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Launchpad"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "launchpads",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Launchpad"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "payload",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "payloads",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Payload"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "roadster",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Roadster"
+            },
+            "args": []
+          },
+          {
+            "name": "rocket",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Rocket"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "rockets",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Rocket"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "ship",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Ship"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "ships",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Ship"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "starlink",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "StarLink"
+            },
+            "args": [
+              {
+                "name": "id",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "starlinks",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "StarLink"
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "SCALAR",
+        "name": "String",
+        "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text."
+      },
+      {
+        "kind": "ENUM",
+        "name": "LaunchRange",
+        "enumValues": [
+          {
+            "name": "latest",
+            "isDeprecated": false
+          },
+          {
+            "name": "next",
+            "isDeprecated": false
+          },
+          {
+            "name": "past",
+            "isDeprecated": false
+          },
+          {
+            "name": "upcoming",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "kind": "ENUM",
+        "name": "Order",
+        "enumValues": [
+          {
+            "name": "asc",
+            "isDeprecated": false
+          },
+          {
+            "name": "desc",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Capsule",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "serial",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "reuse_count",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "water_landings",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "land_landings",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "last_update",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Int",
+        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1."
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Company",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "founder",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "founded",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "employees",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "vehicles",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_sites",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "test_sites",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "ceo",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "cto",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "cto_propulsion",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "valuation",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "headquarters",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Headquarters"
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Links"
+            },
+            "args": []
+          },
+          {
+            "name": "summary",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Headquarters",
+        "fields": [
+          {
+            "name": "address",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "city",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "state",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Links",
+        "fields": [
+          {
+            "name": "website",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "flickr",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "twitter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "elon_twitter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "patch",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Patch"
+            },
+            "args": []
+          },
+          {
+            "name": "reddit",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Reddit"
+            },
+            "args": []
+          },
+          {
+            "name": "presskit",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "webcast",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "youtube_id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "article",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Core",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "serial",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "block",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "reuse_count",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "rtls_attempts",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "rtls_landings",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "asds_attempts",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "last_update",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "asds_landings",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Crew",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "image",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "launches",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Dragon",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "active",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "crew_capacity",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "orbit_duration_yr",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "dry_mass_kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "dry_mass_lb",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "first_flight",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "heat_shield",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "HeatShield"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_payload_mass",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Mass"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_payload_vol",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Vol"
+            },
+            "args": []
+          },
+          {
+            "name": "return_payload_mass",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Mass"
+            },
+            "args": []
+          },
+          {
+            "name": "return_payload_vol",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Vol"
+            },
+            "args": []
+          },
+          {
+            "name": "pressurized_capsule",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Pressurized_Capsule"
+            },
+            "args": []
+          },
+          {
+            "name": "trunk",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Trunk"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Boolean",
+        "description": "The `Boolean` scalar type represents `true` or `false`."
+      },
+      {
+        "kind": "OBJECT",
+        "name": "HeatShield",
+        "fields": [
+          {
+            "name": "material",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "size_meters",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "temp_degrees",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "dev_partner",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Payload_Mass",
+        "fields": [
+          {
+            "name": "kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "lb",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Payload_Vol",
+        "fields": [
+          {
+            "name": "cubic_meter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "cubic_feet",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Pressurized_Capsule",
+        "fields": [
+          {
+            "name": "payload_volume",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Vol"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Trunk",
+        "fields": [
+          {
+            "name": "trunk_volume",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Vol"
+            },
+            "args": []
+          },
+          {
+            "name": "cargo",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cargo"
+            },
+            "args": []
+          },
+          {
+            "name": "height_w_trunk",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Dimension"
+            },
+            "args": []
+          },
+          {
+            "name": "diameter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Dimension"
+            },
+            "args": []
+          },
+          {
+            "name": "flickr_images",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Flickr_Images"
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Cargo",
+        "fields": [
+          {
+            "name": "solar_array",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "unpressurized_cargo",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Dimension",
+        "fields": [
+          {
+            "name": "meters",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "feet",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Float",
+        "description": "The `Float` scalar type represents signed double-precision fractional values as specified by [IEEE 754](https://en.wikipedia.org/wiki/IEEE_floating_point)."
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Flickr_Images",
+        "fields": [
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Landingpad",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "full_name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "locality",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "region",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "latitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_attempts",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_successes",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "details",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Launch",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "flight_number",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "date_utc",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "date_unix",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "date_local",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "date_precision",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "static_fire_date_utc",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "static_fire_date_unix",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "tdb",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "net",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "window",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "success",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "failures",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Failures"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "upcoming",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "details",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "fairings",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Fairing"
+            },
+            "args": []
+          },
+          {
+            "name": "cores",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Cores"
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Links"
+            },
+            "args": []
+          },
+          {
+            "name": "auto_update",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Failures",
+        "fields": [
+          {
+            "name": "time",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "altitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "reason",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Fairing",
+        "fields": [
+          {
+            "name": "reused",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "recovery_attempt",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "recovered",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Cores",
+        "fields": [
+          {
+            "name": "flight",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "gridfins",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "legs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "reused",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_attempts",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_success",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Patch",
+        "fields": [
+          {
+            "name": "small",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "large",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Reddit",
+        "fields": [
+          {
+            "name": "campagin",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "launch",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "media",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "recovery",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Launchpad",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "full_name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "locality",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "region",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "timezone",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "latitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_attempts",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_successes",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Payload",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "reused",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "mass_kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "mass_lbs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "orbit",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "reference_system",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "regime",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "semi_major_axis_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "eccentricity",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "periapsis_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "apoapsis_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "inclination_deg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "period_min",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "lifespan_years",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "epoch",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "mean_motion",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "raan",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "arg_of_pericenter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "mean_anomaly",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "dragon",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Dragon"
+            },
+            "args": []
+          },
+          {
+            "name": "nationalities",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Payload_Dragon",
+        "fields": [
+          {
+            "name": "mass_returned_kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "mass_returned_lbs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "flight_time_sec",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "manifest",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "water_landing",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "land_landing",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Roadster",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_date_utc",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_date_unix",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_mass_kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "launch_mass_lbs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "norad_id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "epoch_id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "orbit_type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "apoapsis_au",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "periapsis_au",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "semi_major_axis_au",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "eccentricity",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "incination",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "periapsis_arg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "period_days",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "speed_kph",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "speed_mph",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "earth_distance_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "earth_distance_mi",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "mars_distance_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "mars_distance_mi",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "flickr_images",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "video",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "details",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Rocket",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "active",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "stages",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "boosters",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "cost_per_launch",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "success_rate_pct",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "first_flight",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "country",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "company",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "diameter",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Dimension"
+            },
+            "args": []
+          },
+          {
+            "name": "mass",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Payload_Mass"
+            },
+            "args": []
+          },
+          {
+            "name": "first_stage",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "RocketFirstStage"
+            },
+            "args": []
+          },
+          {
+            "name": "second_stage",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "RocketSecondStage"
+            },
+            "args": []
+          },
+          {
+            "name": "engines",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Engines"
+            },
+            "args": []
+          },
+          {
+            "name": "landing_legs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "LandingLegs"
+            },
+            "args": []
+          },
+          {
+            "name": "flickr_images",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "wikipedia",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "rocket_id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "rocket_name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "rocket_type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "RocketFirstStage",
+        "fields": [
+          {
+            "name": "reusable",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "engines",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "fuel_amount_tons",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "burn_time_sec",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust_sea_level",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Thrust"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust_vacuum",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Thrust"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "RocketSecondStage",
+        "fields": [
+          {
+            "name": "engines",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "fuel_amount_tons",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "burn_time_sec",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Thrust"
+            },
+            "args": []
+          },
+          {
+            "name": "payloads",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "RocketPayload"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "RocketPayload",
+        "fields": [
+          {
+            "name": "option_1",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "option_2",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "composite_fairing",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Fairing"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "LandingLegs",
+        "fields": [
+          {
+            "name": "number",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "material",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Engines",
+        "fields": [
+          {
+            "name": "number",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "version",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "layout",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "engine_loss_max",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "propellant_1",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "propellant_2",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust_sea_level",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Thrust"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust_vacuum",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "Thrust"
+            },
+            "args": []
+          },
+          {
+            "name": "thrust_to_weight",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Thrust",
+        "fields": [
+          {
+            "name": "kN",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "lbf",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "StarLink",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "version",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "latitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "height_km",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "velocity_kms",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "spaceTrack",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "SpaceTrack"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "SpaceTrack",
+        "fields": [
+          {
+            "name": "CCSDS_OMM_VERS",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "COMMENT",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "CREATION_DATE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "ORIGINATOR",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "OBJECT_NAME",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "OBJECT_ID",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "CENTER_NAME",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "REF_FRAME",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "TIME_SYSTEM",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "MEAN_ELEMENT_THEORY",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "EPOCH",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "MEAN_MOTION",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "ECCENTRICITY",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "INCLINATION",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "RA_OF_ASC_NODE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "ARG_OF_PERICENTER",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "MEAN_ANOMALY",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "EPHEMERIS_TYPE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "CLASSIFICATION_TYPE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "NORAD_CAT_ID",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "ELEMENT_SET_NO",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "REV_AT_EPOCH",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "BSTAR",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "MEAN_MOTION_DOT",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "MEAN_MOTION_DDOT",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "SEMIMAJOR_AXIS",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "PERIOD",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "APOAPSIS",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "PERIAPSIS",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "OBJECT_TYPE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "RCS_SIZE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "COUNTRY_CODE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "LAUNCH_DATE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "SITE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "DECAY_DATE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "DECAYED",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "FILE",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "GP_ID",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "TLE_LINE0",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "TLE_LINE1",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "TLE_LINR2",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "Ship",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "legacy_id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "model",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "active",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean"
+            },
+            "args": []
+          },
+          {
+            "name": "imo",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "mmsi",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "abs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "class",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "mass_kg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "mass_lbs",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "year_built",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "home_port",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "status",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "speed_kn",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "course_deg",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "latitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "longitude",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Float"
+            },
+            "args": []
+          },
+          {
+            "name": "last_ais_update",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "link",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "image",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "History",
+        "fields": [
+          {
+            "name": "id",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "title",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "event_date_utc",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "event_date_unix",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int"
+            },
+            "args": []
+          },
+          {
+            "name": "details",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "links",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "HistoryLinks"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "HistoryLinks",
+        "fields": [
+          {
+            "name": "article",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Schema",
+        "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+        "fields": [
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "types",
+            "description": "A list of all types supported by this server.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Type"
+                  }
+                }
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "queryType",
+            "description": "The type that query operations will be rooted at.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "mutationType",
+            "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type"
+            },
+            "args": []
+          },
+          {
+            "name": "subscriptionType",
+            "description": "If this server support subscription, the type that subscription operations will be rooted at.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type"
+            },
+            "args": []
+          },
+          {
+            "name": "directives",
+            "description": "A list of all directives supported by this server.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__Directive"
+                  }
+                }
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Type",
+        "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByUrl`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "fields": [
+          {
+            "name": "kind",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "ENUM",
+                "name": "__TypeKind"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "specifiedByUrl",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "fields",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Field"
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean"
+                },
+                "defaultValue": "false"
+              }
+            ]
+          },
+          {
+            "name": "interfaces",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type"
+                }
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "possibleTypes",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type"
+                }
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "enumValues",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__EnumValue"
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean"
+                },
+                "defaultValue": "false"
+              }
+            ]
+          },
+          {
+            "name": "inputFields",
+            "isDeprecated": false,
+            "type": {
+              "kind": "LIST",
+              "ofType": {
+                "kind": "NON_NULL",
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__InputValue"
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean"
+                },
+                "defaultValue": "false"
+              }
+            ]
+          },
+          {
+            "name": "ofType",
+            "isDeprecated": false,
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "ENUM",
+        "name": "__TypeKind",
+        "description": "An enum describing what kind of type a given `__Type` is.",
+        "enumValues": [
+          {
+            "name": "SCALAR",
+            "description": "Indicates this type is a scalar.",
+            "isDeprecated": false
+          },
+          {
+            "name": "OBJECT",
+            "description": "Indicates this type is an object. `fields` and `interfaces` are valid fields.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Indicates this type is an interface. `fields`, `interfaces`, and `possibleTypes` are valid fields.",
+            "isDeprecated": false
+          },
+          {
+            "name": "UNION",
+            "description": "Indicates this type is a union. `possibleTypes` is a valid field.",
+            "isDeprecated": false
+          },
+          {
+            "name": "ENUM",
+            "description": "Indicates this type is an enum. `enumValues` is a valid field.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Indicates this type is an input object. `inputFields` is a valid field.",
+            "isDeprecated": false
+          },
+          {
+            "name": "LIST",
+            "description": "Indicates this type is a list. `ofType` is a valid field.",
+            "isDeprecated": false
+          },
+          {
+            "name": "NON_NULL",
+            "description": "Indicates this type is a non-null. `ofType` is a valid field.",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Field",
+        "description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "args",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__InputValue"
+                  }
+                }
+              }
+            },
+            "args": [
+              {
+                "name": "includeDeprecated",
+                "isDeprecated": false,
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean"
+                },
+                "defaultValue": "false"
+              }
+            ]
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "isDeprecated",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "deprecationReason",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__InputValue",
+        "description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "type",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "defaultValue",
+            "description": "A GraphQL-formatted string representing the default value for this input value.",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "isDeprecated",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "deprecationReason",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__EnumValue",
+        "description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "isDeprecated",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "deprecationReason",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "OBJECT",
+        "name": "__Directive",
+        "description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+        "fields": [
+          {
+            "name": "name",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "description",
+            "isDeprecated": false,
+            "type": {
+              "kind": "SCALAR",
+              "name": "String"
+            },
+            "args": []
+          },
+          {
+            "name": "isRepeatable",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean"
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "locations",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "ENUM",
+                    "name": "__DirectiveLocation"
+                  }
+                }
+              }
+            },
+            "args": []
+          },
+          {
+            "name": "args",
+            "isDeprecated": false,
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "LIST",
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "__InputValue"
+                  }
+                }
+              }
+            },
+            "args": []
+          }
+        ]
+      },
+      {
+        "kind": "ENUM",
+        "name": "__DirectiveLocation",
+        "description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+        "enumValues": [
+          {
+            "name": "QUERY",
+            "description": "Location adjacent to a query operation.",
+            "isDeprecated": false
+          },
+          {
+            "name": "MUTATION",
+            "description": "Location adjacent to a mutation operation.",
+            "isDeprecated": false
+          },
+          {
+            "name": "SUBSCRIPTION",
+            "description": "Location adjacent to a subscription operation.",
+            "isDeprecated": false
+          },
+          {
+            "name": "FIELD",
+            "description": "Location adjacent to a field.",
+            "isDeprecated": false
+          },
+          {
+            "name": "FRAGMENT_DEFINITION",
+            "description": "Location adjacent to a fragment definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "FRAGMENT_SPREAD",
+            "description": "Location adjacent to a fragment spread.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INLINE_FRAGMENT",
+            "description": "Location adjacent to an inline fragment.",
+            "isDeprecated": false
+          },
+          {
+            "name": "VARIABLE_DEFINITION",
+            "description": "Location adjacent to a variable definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "SCHEMA",
+            "description": "Location adjacent to a schema definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "SCALAR",
+            "description": "Location adjacent to a scalar definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "OBJECT",
+            "description": "Location adjacent to an object type definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "FIELD_DEFINITION",
+            "description": "Location adjacent to a field definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "ARGUMENT_DEFINITION",
+            "description": "Location adjacent to an argument definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INTERFACE",
+            "description": "Location adjacent to an interface definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "UNION",
+            "description": "Location adjacent to a union definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "ENUM",
+            "description": "Location adjacent to an enum definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "ENUM_VALUE",
+            "description": "Location adjacent to an enum value definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INPUT_OBJECT",
+            "description": "Location adjacent to an input object type definition.",
+            "isDeprecated": false
+          },
+          {
+            "name": "INPUT_FIELD_DEFINITION",
+            "description": "Location adjacent to an input object field definition.",
+            "isDeprecated": false
+          }
+        ]
+      }
+    ]
+  }
+}

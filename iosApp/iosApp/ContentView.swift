@@ -10,7 +10,7 @@ struct ContentView: View {
             .navigationBarTitle("SpaceX Launches")
             .navigationBarItems(trailing:
                 Button("Reload") {
-                    self.viewModel.loadLaunches(forceReload: true)
+                    self.viewModel.loadLaunches()
             })
         }
     }
@@ -34,30 +34,31 @@ extension ContentView {
 
     enum LoadableLaunches {
         case loading
-        case result([RocketLaunch])
+        case result([GetAllLaunchesQuery.Launch])
         case error(String)
     }
 
     class ViewModel: ObservableObject {
-        let sdk: SpaceXSDK
+        let sdk: SpaceXRepository
         @Published var launches = LoadableLaunches.loading
 
-        init(sdk: SpaceXSDK) {
+        init(sdk: SpaceXRepository) {
             self.sdk = sdk
-            self.loadLaunches(forceReload: false)
+            self.loadLaunches()
         }
 
-        func loadLaunches(forceReload: Bool) {
+        func loadLaunches() {
             self.launches = .loading
-            sdk.getLaunches(forceReload: forceReload, completionHandler: { launches, error in
-                if let launches = launches {
-                    self.launches = .result(launches)
+            sdk.getLaunches { item, error in
+                if let item = item {
+                    let data = item as! [GetAllLaunchesQuery.Launch]
+                    self.launches = .result(data)
                 } else {
                     self.launches = .error(error?.localizedDescription ?? "error")
                 }
-            })
+            }
         }
     }
 }
 
-extension RocketLaunch: Identifiable { }
+extension GetAllLaunchesQuery.Launch: Identifiable { }
