@@ -26,6 +26,7 @@ import com.jonathansteele.spacexlaunch.shared.GetAllLaunchesQuery
 import com.jonathansteele.spacexlaunch.shared.SpaceXRepository
 import kotlinx.coroutines.delay
 import java.time.Instant
+import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -52,15 +53,15 @@ private val MediumDateFormatter by lazy {
 fun MainLayout() {
     val context = LocalContext.current
     val repo = remember { SpaceXRepository(DatabaseDriverFactory(context)) }
-    val launch by produceState(initialValue = emptyList<GetAllLaunchesQuery.Launch?>(), repo) {
+    val allLaunches by produceState(initialValue = emptyList<GetAllLaunchesQuery.Launch?>(), repo) {
         value = repo.getLaunches()!!
     }
-    MainList(launch = launch)
+    MainList(allLaunch = allLaunches)
 }
 
 @OptIn(ExperimentalCoilApi::class)
 @Composable
-fun MainList(launch: List<GetAllLaunchesQuery.Launch?>) {
+fun MainList(allLaunch: List<GetAllLaunchesQuery.Launch?>) {
     Scaffold(
         topBar = { TopAppBar(title = { Text(text = "SpaceX Launch") } ) }
     ) {
@@ -77,7 +78,7 @@ fun MainList(launch: List<GetAllLaunchesQuery.Launch?>) {
             onRefresh = { refreshing = true },
         ) {
             LazyColumn {
-                items(launch) {
+                items(allLaunch) {
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -88,7 +89,9 @@ fun MainList(launch: List<GetAllLaunchesQuery.Launch?>) {
                             Image(
                                 painter = rememberImagePainter(data = it?.links?.patch?.small),
                                 contentDescription = "small launch patch",
-                                modifier = Modifier.size(90.dp).align(Alignment.CenterVertically)
+                                modifier = Modifier
+                                    .size(90.dp)
+                                    .align(Alignment.CenterVertically)
                             )
                             Column(
                                 modifier = Modifier.padding(8.dp),
@@ -111,7 +114,9 @@ fun MainList(launch: List<GetAllLaunchesQuery.Launch?>) {
                                 }
                                 Text(text = "Launch details: ".plus(it.details ?: ""))
 
-                                val date = Instant.parse(it.date_utc).atOffset(ZoneOffset.UTC)
+                                val date = Instant.parse(it.date_utc)
+                                    .atOffset(ZoneOffset.UTC)
+                                    .atZoneSameInstant(ZoneId.systemDefault())
                                 Text(text = MediumDateFormatter.format(date))
                             }
                         }
@@ -141,6 +146,6 @@ fun DefaultPreview() {
             )
         )
         val list = listOf(launch)
-        MainList(launch = list)
+        MainList(allLaunch = list)
     }
 }

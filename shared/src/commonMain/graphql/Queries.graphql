@@ -15,3 +15,9 @@ query GetAllLaunches {
   }
 }
 
+query GetUpcomingLaunches {
+   launches(range: upcoming) {
+      name
+      date_unix
+   }
+}

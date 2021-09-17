@@ -29,4 +29,9 @@ class SpaceXRepository(databaseDriverFactory: DatabaseDriverFactory) {
         val response = apolloClient.query(GetAllLaunchesQuery())
         return response.dataOrThrow.launches
     }
+
+    suspend fun getUpcomingLaunches(): List<GetUpcomingLaunchesQuery.Launch?>? {
+        val response = apolloClient.query(GetUpcomingLaunchesQuery())
+        return response.dataOrThrow.launches
+    }
 }
