@@ -1,9 +1,12 @@
 package com.jonathansteele.spacexlaunch.shared
 
 import com.apollographql.apollo3.ApolloClient
+import com.apollographql.apollo3.api.ApolloRequest
+import com.apollographql.apollo3.api.ApolloResponse
 import com.apollographql.apollo3.api.CompiledField
 import com.apollographql.apollo3.api.Executable
 import com.apollographql.apollo3.cache.normalized.*
+import kotlinx.coroutines.flow.Flow
 
 class SpaceXRepository(databaseDriverFactory: DatabaseDriverFactory) {
     private val serverURL = "https://graphql-spacex-server.herokuapp.com/graphql"
@@ -25,13 +28,9 @@ class SpaceXRepository(databaseDriverFactory: DatabaseDriverFactory) {
             cacheResolver = cacheKeyResolver
         )
 
-    suspend fun getLaunches(): List<GetAllLaunchesQuery.Launch?>? {
-        val response = apolloClient.query(GetAllLaunchesQuery())
-        return response.dataOrThrow.launches
-    }
+    fun getLaunches(): Flow<ApolloResponse<GetAllLaunchesQuery.Data>> =
+        apolloClient.queryAsFlow(ApolloRequest(GetAllLaunchesQuery()))
 
-    suspend fun getUpcomingLaunches(): List<GetUpcomingLaunchesQuery.Launch?>? {
-        val response = apolloClient.query(GetUpcomingLaunchesQuery())
-        return response.dataOrThrow.launches
-    }
+    fun getUpcomingLaunches(): Flow<ApolloResponse<GetUpcomingLaunchesQuery.Data>> =
+         apolloClient.queryAsFlow(ApolloRequest(GetUpcomingLaunchesQuery()))
 }

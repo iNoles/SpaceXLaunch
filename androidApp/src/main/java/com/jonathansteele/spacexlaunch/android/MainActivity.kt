@@ -53,10 +53,10 @@ private val MediumDateFormatter by lazy {
 fun MainLayout() {
     val context = LocalContext.current
     val repo = remember { SpaceXRepository(DatabaseDriverFactory(context)) }
-    val allLaunches by produceState(initialValue = emptyList<GetAllLaunchesQuery.Launch?>(), repo) {
-        value = repo.getLaunches()!!
+    val allLaunchesState = repo.getLaunches().collectAsState(initial = null).value
+    allLaunchesState?.data?.launchesFilterNotNull()?.let {
+        MainList(allLaunch = it)
     }
-    MainList(allLaunch = allLaunches)
 }
 
 @OptIn(ExperimentalCoilApi::class)
