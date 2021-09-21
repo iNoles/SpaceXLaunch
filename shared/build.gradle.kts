@@ -30,7 +30,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                api("com.apollographql.apollo3:apollo-runtime:3.0.0-alpha06")
+                api("com.apollographql.apollo3:apollo-runtime:3.0.0-dev14")
             }
         }
         val commonTest by getting {
