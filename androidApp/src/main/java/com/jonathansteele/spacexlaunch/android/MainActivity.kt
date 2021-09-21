@@ -21,7 +21,6 @@ import coil.compose.rememberImagePainter
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.jonathansteele.spacexlaunch.android.ui.theme.SpaceX_LaunchTheme
-import com.jonathansteele.spacexlaunch.shared.DatabaseDriverFactory
 import com.jonathansteele.spacexlaunch.shared.GetAllLaunchesQuery
 import com.jonathansteele.spacexlaunch.shared.SpaceXRepository
 import kotlinx.coroutines.delay
@@ -51,8 +50,7 @@ private val MediumDateFormatter by lazy {
 
 @Composable
 fun MainLayout() {
-    val context = LocalContext.current
-    val repo = remember { SpaceXRepository(DatabaseDriverFactory(context)) }
+    val repo = remember { SpaceXRepository()) }
     val allLaunchesState = repo.getLaunches().collectAsState(initial = null).value
     allLaunchesState?.data?.launchesFilterNotNull()?.let {
         MainList(allLaunch = it)
