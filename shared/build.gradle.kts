@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("com.apollographql.apollo3") version "3.0.0-alpha05"
+    id("com.apollographql.apollo3") version "3.0.0-alpha06"
 }
 
 kotlin {
@@ -30,7 +30,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                api("com.apollographql.apollo3:apollo-runtime:3.0.0-alpha05")
+                api("com.apollographql.apollo3:apollo-runtime:3.0.0-alpha06")
             }
         }
         val commonTest by getting {
