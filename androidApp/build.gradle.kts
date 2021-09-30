@@ -58,7 +58,7 @@ dependencies {
     implementation ("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation ("androidx.activity:activity-compose:1.3.1")
     implementation ("io.coil-kt:coil-compose:1.3.2")
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.18.0")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.19.0")
     // implementation("com.google.accompanist:accompanist-pager-indicators:0.18.0")
 
     coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
