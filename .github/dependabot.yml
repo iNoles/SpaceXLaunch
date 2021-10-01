@@ -9,7 +9,3 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
-  - package-ecosystem: "gradle" # See documentation for possible values
-    directory: "/androidApp" # Location of package manifests
-    schedule:
-      interval: "daily"
