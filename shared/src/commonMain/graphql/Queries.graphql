@@ -3,8 +3,6 @@ query GetAllLaunches {
     id
     name
     date_utc
-    details
-    success
     flight_number
     links {
       article
@@ -19,5 +17,119 @@ query GetUpcomingLaunches {
    launches(range: upcoming) {
       name
       date_unix
+      flight_number
+      links {
+        patch {
+           small
+        }
+      }
    }
 }
+
+query GetCompanyInfo {
+   company {
+      name
+      founded
+      ceo
+      cto
+      coo
+      valuation
+      employees
+      headquarters {
+        city
+        state
+      }
+   }
+}
+
+query GetLaunchDetails($launchId: String!) {
+  launch(id: $launchId) {
+    flight_number
+    name
+    date_utc
+    details
+    links {
+      article
+    }
+  }
+}
+
+ query AllVehiclesQuery {
+   rockets {
+     name
+     id
+     description
+     wikipedia
+     diameter {
+       meters
+     }
+     active
+     first_flight
+     cost_per_launch
+     success_rate_pct
+     engines {
+       thrust_sea_level {
+         kN
+       }
+       thrust_vacuum {
+         kN
+       }
+       type
+       version
+       propellant_2
+       propellant_1
+     }
+   }
+   roadster {
+     name
+     details
+     wikipedia
+     launch_date_utc
+     orbit_type
+     video
+     periapsis_au
+     apoapsis_au
+     inclination
+     longitude
+     period_days
+     speed_kph
+     earth_distance_km
+     mars_distance_km
+   }
+   ships {
+     id
+     name
+     link
+     active
+     mass_kg
+     year_built
+     model
+     type
+     home_port
+     status
+     speed_kn
+   }
+   dragons {
+     id
+     name
+     type
+     description
+     wikipedia
+     height_w_trunk {
+       meters
+     }
+     diameter {
+       meters
+     }
+     dry_mass_kg
+     active
+     first_flight
+     crew_capacity
+     launch_payload_mass {
+       kg
+     }
+     return_payload_mass {
+       kg
+     }
+   }
+ }

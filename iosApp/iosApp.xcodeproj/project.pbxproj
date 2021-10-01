@@ -8,16 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
+		712B3F4E26FE513000AC4695 /* UpcomingLaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B3F4D26FE513000AC4695 /* UpcomingLaunchRow.swift */; };
+		7132817926F8516900665BC2 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7132817826F8516900665BC2 /* CompanyRow.swift */; };
+		717DDD7926F6F20C001763C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717DDD7826F6F20C001763C0 /* Images.xcassets */; };
+		717DDD7B26F6F3A1001763C0 /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717DDD7A26F6F3A1001763C0 /* UpcomingView.swift */; };
+		717DDD7D26F6F438001763C0 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717DDD7C26F6F438001763C0 /* CompanyView.swift */; };
 		71E19E3D26B264790035139F /* RocketLaunchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E19E3C26B264790035139F /* RocketLaunchRow.swift */; };
 		71EEE1F226F2F29D00FDF2A4 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 71EEE1F126F2F29D00FDF2A4 /* NukeUI */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		7555FF83242A565900829871 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
+		712B3F4D26FE513000AC4695 /* UpcomingLaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchRow.swift; sourceTree = "<group>"; };
+		7132817826F8516900665BC2 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
+		717DDD7826F6F20C001763C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		717DDD7A26F6F3A1001763C0 /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		717DDD7C26F6F438001763C0 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		71E19E3C26B264790035139F /* RocketLaunchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchRow.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7555FF82242A565900829871 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,10 +63,15 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF82242A565900829871 /* ContentView.swift */,
+				7555FF82242A565900829871 /* HomeView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				71E19E3C26B264790035139F /* RocketLaunchRow.swift */,
+				717DDD7826F6F20C001763C0 /* Images.xcassets */,
+				717DDD7A26F6F3A1001763C0 /* UpcomingView.swift */,
+				717DDD7C26F6F438001763C0 /* CompanyView.swift */,
+				7132817826F8516900665BC2 /* CompanyRow.swift */,
+				712B3F4D26FE513000AC4695 /* UpcomingLaunchRow.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -133,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717DDD7926F6F20C001763C0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71E19E3D26B264790035139F /* RocketLaunchRow.swift in Sources */,
+				717DDD7D26F6F438001763C0 /* CompanyView.swift in Sources */,
+				712B3F4E26FE513000AC4695 /* UpcomingLaunchRow.swift in Sources */,
+				717DDD7B26F6F3A1001763C0 /* UpcomingView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				7555FF83242A565900829871 /* HomeView.swift in Sources */,
+				7132817926F8516900665BC2 /* CompanyRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 		7555FFA6242A565B00829871 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KK289KR4B;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +336,7 @@
 		7555FFA7242A565B00829871 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5KK289KR4B;
 				ENABLE_PREVIEWS = YES;

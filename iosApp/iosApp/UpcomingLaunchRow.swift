@@ -1,8 +1,8 @@
 //
-//  RocketLaunchRow.swift
+//  UpcomingLaunchRow.swift
 //  iosApp
 //
-//  Created by Jonathan Steele on 7/29/21.
+//  Created by Jonathan Steele on 9/24/21.
 //  Copyright © 2021 Jonathan Steele. All rights reserved.
 //
 
@@ -10,14 +10,8 @@ import SwiftUI
 import shared
 import NukeUI
 
-struct RocketLaunchRow: View {
-    var rocketLaunch: GetAllLaunchesQuery.Launch
-    
-    static let isoFormatter: ISO8601DateFormatter = {
-        let formatter = ISO8601DateFormatter()
-        formatter.formatOptions =  [.withInternetDateTime, .withFractionalSeconds]
-        return formatter
-    }()
+struct UpcomingLaunchRow: View {
+    var rocketLaunch: GetUpcomingLaunchesQuery.Launch
     
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -27,7 +21,7 @@ struct RocketLaunchRow: View {
     }()
 
     var body: some View {
-        let date = RocketLaunchRow.isoFormatter.date(from: rocketLaunch.date_utc!)!
+        let date = Date(timeIntervalSince1970: rocketLaunch.date_unix as! TimeInterval)
         HStack {
             LazyImage(source: rocketLaunch.links?.patch?.small)
                 .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -40,20 +34,18 @@ struct RocketLaunchRow: View {
     }
 }
 
-struct RocketLaunchRow_Previews: PreviewProvider {
+struct UpcomingLaunchRow_Preview: PreviewProvider {
     static var previews: some View {
-        RocketLaunchRow(
+        UpcomingLaunchRow(
             rocketLaunch:
-                GetAllLaunchesQuery.Launch(
-                    id: "5eb87cd9ffd86e000604b32a",
+                GetUpcomingLaunchesQuery.Launch(
                     name: "FalconStat",
-                    date_utc: "2006-03-24T22:30:00.000Z",
+                    date_unix: 00000,
                     flight_number: 1,
                     links:
-                        GetAllLaunchesQuery.Links(
-                            article: "https://www.space.com/2196-spacex-inaugural-falcon-1-rocket-lost-launch.html",
+                        GetUpcomingLaunchesQuery.Links(
                             patch:
-                                GetAllLaunchesQuery.Patch(
+                                GetUpcomingLaunchesQuery.Patch(
                                     small: "https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png"
                                 )
                         )

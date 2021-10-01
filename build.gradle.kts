@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
 
-    val kotlinVersion = "1.5.30"
+    val kotlinVersion = "1.5.31"
 
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")

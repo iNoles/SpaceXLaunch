@@ -1,7 +1,7 @@
 import SwiftUI
 import shared
 
-struct ContentView: View {
+struct HomeView: View {
   @ObservedObject private(set) var viewModel: ViewModel
 
     var body: some View {
@@ -23,19 +23,15 @@ struct ContentView: View {
             return AnyView(List(launches) { launch in
                 RocketLaunchRow(rocketLaunch: launch)
             })
-        case .error(let description):
-            print(description)
-            return AnyView(Text(description).multilineTextAlignment(.center))
         }
     }
 }
 
-extension ContentView {
+extension HomeView {
 
     enum LoadableLaunches {
         case loading
         case result([GetAllLaunchesQuery.Launch])
-        case error(String)
     }
 
     class ViewModel: ObservableObject {
@@ -49,16 +45,12 @@ extension ContentView {
 
         func loadLaunches() {
             self.launches = .loading
-            sdk.getLaunches { item, error in
-                if let item = item {
-                    let data = item as! [GetAllLaunchesQuery.Launch]
-                    self.launches = .result(data)
-                } else {
-                    self.launches = .error(error?.localizedDescription ?? "error")
-                }
-            }
+            sdk.getLaunches(success: { data in
+                self.launches = .result(data.launchesFilterNotNull()!)
+            })
         }
     }
 }
+
 
 extension GetAllLaunchesQuery.Launch: Identifiable { }
