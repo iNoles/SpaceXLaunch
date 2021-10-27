@@ -52,7 +52,7 @@ android {
 dependencies {
     implementation (project(":shared"))
 
-    implementation ("androidx.core:core-ktx:1.6.0")
+    implementation ("androidx.core:core-ktx:1.7.0")
     implementation ("androidx.compose.ui:ui:$composeVersion")
     implementation ("androidx.compose.material:material:$composeVersion")
     implementation ("androidx.compose.ui:ui-tooling-preview:$composeVersion")
