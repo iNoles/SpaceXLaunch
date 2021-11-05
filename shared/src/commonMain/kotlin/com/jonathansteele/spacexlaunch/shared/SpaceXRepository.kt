@@ -10,22 +10,22 @@ import kotlinx.coroutines.launch
 
 class SpaceXRepository {
     private val serverURL = "https://graphql-spacex-server.herokuapp.com/graphql"
-    private val apolloClient = ApolloClient(serverURL)
+    private val apolloClient = ApolloClient.Builder().serverUrl(serverURL).build()
 
     fun getLaunches(): Flow<ApolloResponse<GetAllLaunchesQuery.Data>> =
-        apolloClient.queryAsFlow(ApolloRequest(GetAllLaunchesQuery()))
+        apolloClient.executeAsFlow(ApolloRequest.Builder(GetAllLaunchesQuery()).build())
 
     fun getUpcomingLaunches(): Flow<ApolloResponse<GetUpcomingLaunchesQuery.Data>> =
-         apolloClient.queryAsFlow(ApolloRequest(GetUpcomingLaunchesQuery()))
+         apolloClient.executeAsFlow(ApolloRequest.Builder(GetUpcomingLaunchesQuery()).build())
 
     fun getCompany(): Flow<ApolloResponse<GetCompanyInfoQuery.Data>> =
-        apolloClient.queryAsFlow(ApolloRequest(GetCompanyInfoQuery()))
+        apolloClient.executeAsFlow(ApolloRequest.Builder(GetCompanyInfoQuery()).build())
 
     fun getLaunch(withId: String): Flow<ApolloResponse<GetLaunchDetailsQuery.Data>> =
-        apolloClient.queryAsFlow(ApolloRequest(GetLaunchDetailsQuery(withId)))
+        apolloClient.executeAsFlow(ApolloRequest.Builder(GetLaunchDetailsQuery(withId)).build())
 
     fun getVehicles(): Flow<ApolloResponse<AllVehiclesQuery.Data>> =
-        apolloClient.queryAsFlow(ApolloRequest(AllVehiclesQuery()))
+        apolloClient.executeAsFlow(ApolloRequest.Builder(AllVehiclesQuery()).build())
 
     private val mainScope = MainScope() // Uses by iOS
 

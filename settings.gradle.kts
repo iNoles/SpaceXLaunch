@@ -5,7 +5,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-
 rootProject.name = "SpaceX_Launch"
 include(":shared")
 include(":androidApp")

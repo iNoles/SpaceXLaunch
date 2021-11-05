@@ -5,6 +5,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import com.jonathansteele.spacexlaunch.shared.AllVehiclesQuery
 import com.jonathansteele.spacexlaunch.shared.SpaceXRepository
 import java.time.Instant
@@ -21,52 +23,48 @@ private val MediumDateFormatter by lazy {
 fun VehiclesTab(repo: SpaceXRepository) {
     val allVehiclesState = repo.getVehicles().collectAsState(initial = null).value
     allVehiclesState?.dataOrThrow?.let {
-        VehiclesList(it)
+        VehiclesList(data = it)
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun VehiclesList(data: AllVehiclesQuery.Data) {
     Scaffold(
         topBar = { TopAppBar(title = { Text(text = "Vehicles") }) }
-    ) {
-        LazyColumn {
+    ) { paddingValues ->
+        LazyColumn(contentPadding = paddingValues) {
             item {
                 val roadster = data.roadster
                 val roadsterLaunchDate = Instant.parse(roadster?.launch_date_utc)
                     .atOffset(ZoneOffset.UTC)
                     .atZoneSameInstant(ZoneId.systemDefault())
-                ListItem(
-                    text = { Text(text = roadster?.name!!) },
-                    secondaryText = {
-                        Text(text = MediumDateFormatter.format(roadsterLaunchDate))
-                    }
+                Text(text = roadster?.name!!, style = MaterialTheme.typography.subtitle1)
+                Text(
+                    text = MediumDateFormatter.format(roadsterLaunchDate),
+                    style = MaterialTheme.typography.body2
                 )
+                Divider(color = Color.Black, thickness = 1.dp)
             }
-            items(data.dragonsFilterNotNull()!!) {
-                ListItem(
-                    text = { Text(text = it.name!!) },
-                    secondaryText = {
-                        Text(text = it.first_flight!!)
-                    }
-                )
+            data.dragonsFilterNotNull()?.let { dragonsList ->
+                items(dragonsList) {
+                    Text(text = it.name!!, style = MaterialTheme.typography.subtitle1)
+                    Text(text = it.first_flight!!, style = MaterialTheme.typography.body2)
+                    Divider(color = Color.Black, thickness = 1.dp)
+                }
             }
-            items(data.rocketsFilterNotNull()!!) {
-                ListItem(
-                    text = { Text(text = it.name!!) },
-                    secondaryText = {
-                        Text(text = it.first_flight!!)
-                    }
-                )
+            data.rocketsFilterNotNull()?.let { rocketsList ->
+                items(rocketsList) {
+                    Text(text = it.name!!, style = MaterialTheme.typography.subtitle1)
+                    Text(text = it.first_flight!!, style = MaterialTheme.typography.body2)
+                    Divider(color = Color.Black, thickness = 1.dp)
+                }
             }
-            items(data.shipsFilterNotNull()!!) {
-                ListItem(
-                    text = { Text(text = it.name!!) },
-                    secondaryText = {
-                        Text(text = "Ship Built: ".plus(it.year_built))
-                    }
-                )
+            data.shipsFilterNotNull()?.let { shipsList ->
+                items(shipsList) {
+                    Text(text = it.name!!, style = MaterialTheme.typography.subtitle1)
+                    Text(text = "Ship Built: ".plus(it.year_built), style = MaterialTheme.typography.body2)
+                    Divider(color = Color.Black, thickness = 1.dp)
+                }
             }
         }
     }

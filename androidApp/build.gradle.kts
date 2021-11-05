@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
 }
 
-val composeVersion = "1.1.0-beta01"
+val composeVersion = "1.1.0-beta02"
 
 android {
     compileSdk = 31
@@ -34,7 +34,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
-        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
+        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn", "-Xjvm-default=all")
     }
     buildFeatures {
         compose = true
@@ -57,8 +57,8 @@ dependencies {
     implementation ("androidx.compose.material:material:$composeVersion")
     implementation ("androidx.compose.ui:ui-tooling-preview:$composeVersion")
     implementation ("androidx.activity:activity-compose:1.4.0")
-    implementation ("io.coil-kt:coil-compose:1.4.0")
-    implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
+    implementation ("io.coil-kt:coil-compose:2.0.0-alpha02")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.21.2-beta")
     implementation("androidx.navigation:navigation-compose:2.4.0-beta01")
 
     coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")

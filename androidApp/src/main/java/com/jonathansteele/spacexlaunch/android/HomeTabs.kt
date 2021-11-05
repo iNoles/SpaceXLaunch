@@ -10,7 +10,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
@@ -29,15 +28,15 @@ private val MediumDateFormatter by lazy {
 }
 
 @Composable
-fun HomeTabs(repo: SpaceXRepository) {
+fun HomeTabs(repo: SpaceXRepository, modifier: Modifier = Modifier) {
     val allLaunchesState = repo.getLaunches().collectAsState(initial = null).value
     allLaunchesState?.data?.launchesFilterNotNull()?.let {
-        MainList(allLaunch = it)
+        MainList(allLaunch = it, modifier = modifier)
     }
 }
 
 @Composable
-fun MainList(allLaunch: List<GetAllLaunchesQuery.Launch?>) {
+fun MainList(allLaunch: List<GetAllLaunchesQuery.Launch?>, modifier: Modifier) {
     Scaffold(
         topBar = { TopAppBar(title = { Text(text = "SpaceX Launch") } ) }
     ) {
@@ -53,15 +52,15 @@ fun MainList(allLaunch: List<GetAllLaunchesQuery.Launch?>) {
             state = rememberSwipeRefreshState(isRefreshing = refreshing),
             onRefresh = { refreshing = true },
         ) {
-            LazyColumn {
+            LazyColumn(contentPadding = it) {
                 items(allLaunch) {
                     Card(
-                        modifier = Modifier
+                        modifier = modifier
                             .fillMaxWidth()
                             .padding(horizontal = 16.dp, vertical = 8.dp),
                         elevation = 8.dp
                     ) {
-                        HomeListItem(launch = it)
+                        HomeListItem(launch = it, modifier = modifier)
                     }
                 }
             }
@@ -69,28 +68,28 @@ fun MainList(allLaunch: List<GetAllLaunchesQuery.Launch?>) {
     }
 }
 
-@OptIn(ExperimentalCoilApi::class)
 @Composable
-fun HomeListItem(launch: GetAllLaunchesQuery.Launch?) {
+fun HomeListItem(launch: GetAllLaunchesQuery.Launch?, modifier: Modifier) {
     val date = Instant.parse(launch?.date_utc)
         .atOffset(ZoneOffset.UTC)
         .atZoneSameInstant(ZoneId.systemDefault())
     val typography = MaterialTheme.typography
-    Row(modifier = Modifier.padding(top = 16.dp, start = 16.dp)) {
+    Row(modifier = modifier.padding(start = 16.dp, end = 16.dp)) {
         Image(
             painter = rememberImagePainter(data = launch?.links?.patch?.small),
             contentDescription = "small launch patch",
-            modifier = Modifier.size(90.dp)
+            modifier = modifier.size(90.dp)
         )
         Column(
-            modifier = Modifier.weight(1f)
+            modifier = modifier
+                .weight(1f)
                 .align(Alignment.CenterVertically)
-                .padding(start = 16.dp, end = 16.dp),
+                .padding(end = 16.dp),
         ) {
             Text(text = launch?.name!!, style = typography.subtitle1)
             Text(text = MediumDateFormatter.format(date), style = typography.body2)
         }
-        Box(modifier = Modifier.align(Alignment.CenterVertically).padding(end = 16.dp)) {
+        Box(modifier = modifier.align(Alignment.CenterVertically)) {
             Text(text = "#".plus(launch?.flight_number), style = typography.caption)
         }
     }
@@ -112,7 +111,6 @@ fun HomeTabsPreview() {
                 )
             )
         )
-        val list = listOf(launch)
-        MainList(allLaunch = list)
+        MainList(allLaunch = listOf(launch), modifier = Modifier)
     }
 }
