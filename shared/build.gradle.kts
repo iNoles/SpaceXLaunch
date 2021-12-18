@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("com.apollographql.apollo3") version "3.0.0-beta02"
+    id("com.apollographql.apollo3") version "3.0.0"
 }
 
 kotlin {
@@ -28,7 +28,7 @@ kotlin {
 
         val commonMain by getting {
             dependencies {
-                api("com.apollographql.apollo3:apollo-runtime:3.0.0-beta02")
+                api("com.apollographql.apollo3:apollo-runtime:3.0.0")
                 api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
             }
         }
