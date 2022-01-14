@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
 }
 
-val composeVersion = "1.1.0-rc01"
+val composeVersion = "1.2.0-alpha01"
 
 android {
     compileSdk = 31
@@ -28,7 +28,7 @@ android {
         }
     }
     compileOptions {
-        isCoreLibraryDesugaringEnabled = true
+        // isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
@@ -61,7 +61,7 @@ dependencies {
     implementation("com.google.accompanist:accompanist-swiperefresh:0.22.0-rc")
     implementation("androidx.navigation:navigation-compose:2.4.0-rc01")
 
-    coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
+    // coreLibraryDesugaring ("com.android.tools:desugar_jdk_libs:1.1.5")
 
     testImplementation ("junit:junit:4.13.2")
     androidTestImplementation ("androidx.test.ext:junit:1.1.3")

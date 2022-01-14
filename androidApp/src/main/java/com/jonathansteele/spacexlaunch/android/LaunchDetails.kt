@@ -13,7 +13,7 @@ import com.jonathansteele.spacexlaunch.shared.SpaceXRepository
 @Composable
 fun LaunchDetail(sdk: SpaceXRepository, id: String) {
     val launchDetail = sdk.getLaunch(id).collectAsState(initial = null).value
-    launchDetail?.dataOrThrow?.launch?.let {
+    launchDetail?.dataAssertNoErrors?.launch?.let {
         LaunchDetailScreen(it)
     }
 }

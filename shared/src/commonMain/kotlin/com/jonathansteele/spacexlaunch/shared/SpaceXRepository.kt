@@ -31,25 +31,25 @@ class SpaceXRepository {
 
     fun getLaunches(success: (GetAllLaunchesQuery.Data) -> Unit) {
         mainScope.launch {
-            getLaunches().collect { success(it.dataOrThrow) }
+            getLaunches().collect { success(it.dataAssertNoErrors) }
         }
     }
 
     fun getUpcomingLaunches(success: (GetUpcomingLaunchesQuery.Data) -> Unit) {
         mainScope.launch {
-            getUpcomingLaunches().collect { success(it.dataOrThrow) }
+            getUpcomingLaunches().collect { success(it.dataAssertNoErrors) }
         }
     }
 
     fun getCompany(success: (GetCompanyInfoQuery.Data) -> Unit) {
         mainScope.launch {
-            getCompany().collect { success(it.dataOrThrow) }
+            getCompany().collect { success(it.dataAssertNoErrors) }
         }
     }
 
     fun getVehicles(success: (AllVehiclesQuery.Data) -> Unit) {
         mainScope.launch {
-            getVehicles().collect { success(it.dataOrThrow) }
+            getVehicles().collect { success(it.dataAssertNoErrors) }
         }
     }
 }

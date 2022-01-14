@@ -10,6 +10,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.jonathansteele.spacexlaunch.shared.GetUpcomingLaunchesQuery
 import com.jonathansteele.spacexlaunch.shared.SpaceXRepository
@@ -59,7 +60,7 @@ fun UpcomingListItem(launch: GetUpcomingLaunchesQuery.Launch, modifier: Modifier
     val typography = MaterialTheme.typography
     Row(modifier = modifier.padding(start = 16.dp, end = 16.dp)) {
         Image(
-            painter = rememberImagePainter(data = launch.links?.patch?.small),
+            painter = rememberAsyncImagePainter(model = launch.links?.patch?.small),
             contentDescription = "small launch patch",
             modifier = modifier.size(90.dp)
         )

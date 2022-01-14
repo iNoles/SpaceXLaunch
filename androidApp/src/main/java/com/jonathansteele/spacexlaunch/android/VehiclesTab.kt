@@ -22,7 +22,7 @@ private val MediumDateFormatter by lazy {
 @Composable
 fun VehiclesTab(repo: SpaceXRepository) {
     val allVehiclesState = repo.getVehicles().collectAsState(initial = null).value
-    allVehiclesState?.dataOrThrow?.let {
+    allVehiclesState?.dataAssertNoErrors?.let {
         VehiclesList(data = it)
     }
 }
