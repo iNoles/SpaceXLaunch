@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("com.apollographql.apollo3") version "3.0.0"
+    id("com.apollographql.apollo3") version "3.2.1"
 }
 
 kotlin {
