@@ -29,7 +29,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api("com.apollographql.apollo3:apollo-runtime:3.4.0")
-                api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
+                api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }
         val commonTest by getting {
